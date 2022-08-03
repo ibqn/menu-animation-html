@@ -1,0 +1,13 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@fontsource/fjalla-one': ^4.5.7
+
+dependencies:
+  '@fontsource/fjalla-one': 4.5.7
+
+packages:
+
+  /@fontsource/fjalla-one/4.5.7:
+    resolution: {integrity: sha512-5pbE9tFj1ix2mbYiOH1PD/EMDSPZQNShFcdfvotCBVw41iOiXh4mxQ/JZSsIlPSgv+DVmfYd6r68mq/ZDkK8tA==}
+    dev: false

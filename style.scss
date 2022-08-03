@@ -1,0 +1,61 @@
+@import 'node_modules/@fontsource/fjalla-one/index.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fjalla One', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 15%);
+}
+
+.nav {
+  li {
+    display: inline-flex;
+    margin: 10px 25px;
+  }
+
+  a {
+    font-size: 40px;
+    text-decoration: none;
+    color: hsl(0, 50%, 60%);
+    text-transform: capitalize;
+    line-height: 1.2;
+
+    &:hover {
+      .char {
+        transform: translateY(-100%);
+      }
+    }
+  }
+
+  .word {
+    display: inline-flex;
+    overflow: hidden;
+  }
+
+  .char {
+    position: relative;
+    transition: transform 0.5s cubic-bezier(0.27, 0.68, 0.25, 1.4);
+    transition-delay: calc(0.02s * var(--index));
+
+    &::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 100%;
+      color: hsl(247, 41%, 67%);
+    }
+  }
+}
